@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","mappings":"yBAEWA,SAASC,cAAc,MAC/BC,UAAY,6B","sources":["webpack://js2/./src/index.js"],"sourcesContent":["import \"./style/style.css\";\n\nconst h1 = document.querySelector(\"h1\");\nh1.innerHTML = \"Всем привет! Это мой блог.\";\n"],"names":["document","querySelector","innerHTML"],"sourceRoot":""}
