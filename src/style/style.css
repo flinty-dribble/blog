@@ -60,4 +60,13 @@ body {
   padding: 8px 0;
 }
 
+.navigate {
+  background: plum;
+  padding: 5px 5px;
+}
+
+.buttons {
+  margin: 5px 5px;
+}
+
 /*# sourceMappingURL=style.css.map */
