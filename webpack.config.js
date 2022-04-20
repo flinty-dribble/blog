@@ -6,7 +6,7 @@ const path = require("path");
 const mode = process.env.NODE_ENV;
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/slider.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
