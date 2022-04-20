@@ -1,37 +1,33 @@
 import "./style/style.css";
 
-function slider(slide) {
-  const slides = slide;
+const slides = document.querySelectorAll(".slide");
 
-  let slideIndex = 1;
+let slideIndex = 1;
 
-  function showSlides(n) {
-    let i;
-    if (n > slides.length) {
-      slideIndex = 1;
-    }
-    if (n < 1) {
-      slideIndex = slides.length;
-    }
-    for (i = 0; i < slides.length; i += 1) {
-      slides[i].style.display = "none";
-    }
-
-    slides[slideIndex - 1].style.display = "block";
+function showSlides(n) {
+  let i;
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i += 1) {
+    slides[i].style.display = "none";
   }
 
-  showSlides(slideIndex);
-
-  const right = document.querySelector(".prev");
-  const left = document.querySelector(".next");
-
-  right.addEventListener("click", () => {
-    showSlides((slideIndex += 1));
-  });
-
-  left.addEventListener("click", () => {
-    showSlides((slideIndex -= 1));
-  });
+  slides[slideIndex - 1].style.display = "block";
 }
 
-slider(document.querySelectorAll(".slide"));
+showSlides(slideIndex);
+
+const left = document.querySelector(".left");
+const right = document.querySelector(".right");
+
+right.addEventListener("click", () => {
+  showSlides((slideIndex += 1));
+});
+
+left.addEventListener("click", () => {
+  showSlides((slideIndex -= 1));
+});
