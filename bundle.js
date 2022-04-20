@@ -1,2 +1,2 @@
-!function(){"use strict";document.querySelector(".p").innerHTML="***"}();
+!function(){"use strict";!function(e){var n=document.querySelectorAll(".slide"),t=1;function c(e){var c;for(e>n.length&&(t=1),e<1&&(t=n.length),c=0;c<n.length;c+=1)n[c].style.display="none";n[t-1].style.display="block"}c(t);var l=document.querySelector(".prev"),o=document.querySelector(".next");l.addEventListener("click",(function(){c(t+=1)})),o.addEventListener("click",(function(){c(t-=1)}))}()}();
 //# sourceMappingURL=bundle.js.map
