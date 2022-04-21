@@ -6,10 +6,13 @@ const path = require("path");
 const mode = process.env.NODE_ENV;
 
 module.exports = {
-  entry: "./src/slider.js",
+  entry: {
+    slide: "./src/slider.js",
+    style: "./src/style.js",
+  },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "bundle.js",
+    filename: "[name].js",
     clean: true,
     environment: {
       arrowFunction: false,
@@ -24,14 +27,17 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "list.html",
       template: "src/list.html",
+      excludeChunks: ["slide"],
     }),
     new HtmlWebpackPlugin({
       filename: "entry.html",
       template: "src/entry.html",
+      excludeChunks: ["slide"],
     }),
     new HtmlWebpackPlugin({
       filename: "feedback.html",
       template: "src/feedback.html",
+      excludeChunks: ["slide"],
     }),
     new MiniCssExtractPlugin(),
   ],

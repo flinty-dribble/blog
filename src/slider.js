@@ -1,5 +1,3 @@
-import "./style/style.css";
-
 const slides = document.querySelectorAll(".slide");
 
 let slideIndex = 1;
